@@ -13,12 +13,6 @@ docker-compose up -d
 ```
 Esto iniciará un contenedor de MySQL y creará automáticamente la base de datos `buscarautos`.
 
-Puedes verificar que la base de datos se creó correctamente con:
-```bash
-docker exec buscarautos_mysql mysql -uroot -proot -e "SHOW DATABASES;"
-```
-Deberías ver `buscarautos` en la lista de bases de datos.
-
 3. Configurar variables de entorno:
 Crear un archivo `.env` en la raíz del proyecto con:
 ```env
@@ -34,11 +28,11 @@ DB_NAME=buscarautos
 npm run dev
 ```
 
-5. Poblar la base de datos:
+5. Seedear la base de datos:
 ```bash
 npm run seed
 ```
-Este comando creará las tablas necesarias e insertará los datos iniciales de los autos.
+Esto creará las tablas necesarias e insertará los datos iniciales de los autos.
 
 El servidor estará disponible en `http://localhost:8000`
 
@@ -61,12 +55,12 @@ El servidor estará disponible en `http://localhost:8000`
   - `/uploads`: Archivos estáticos (imágenes)
 
 ### Características Implementadas
-1. **Base de datos**:
+**Base de datos**:
    - Connection pool para mejor rendimiento
    - Inicialización automática de tablas
    - Script de seed para datos iniciales
 
-2. **Endpoints**:
+**Endpoints**:
    - GET `/api/cars`: Lista de autos con filtros
      - Búsqueda por texto
      - Filtro por marca
@@ -75,12 +69,3 @@ El servidor estará disponible en `http://localhost:8000`
    - GET `/api/cars/:id`: Detalle de auto
    - GET `/api/cars/brands`: Lista de marcas únicas
    - GET `/api/cars/max-price`: Precio máximo disponible
-
-3. **Servicio de archivos estáticos**:
-   - Servir imágenes desde `/uploads`
-   - URLs relativas para mejor portabilidad
-
-4. **Optimizaciones**:
-   - Queries SQL optimizadas con índices
-   - Parámetros preparados para seguridad
-   - CORS configurado para desarrollo
