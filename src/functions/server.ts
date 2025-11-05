@@ -9,18 +9,17 @@ import ServerlessHttp from "serverless-http";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/uploads", express.static(path.join(__dirname, "./uploads")));
+app.use(
+  "/.netlify/functions/server/api/uploads",
+  express.static(path.join(__dirname, "./uploads"))
+);
 
-app.use("/api/cars", carsRouter);
-
-app.get("/health", (_req, res) => {
-  res.json({ status: "ok" });
-});
+app.use("/.netlify/functions/server/api/cars", carsRouter);
 
 initializeDatabase()
   .then(() => {
