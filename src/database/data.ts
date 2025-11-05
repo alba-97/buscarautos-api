@@ -6,7 +6,7 @@ export const carsData = [
     price: 45000,
     year: 2019,
     fuelType: "Eléctrico",
-    image: "uploads/tesla-model-3.jpg",
+    image: "/tesla-model-3.jpg",
     description:
       "Sedán eléctrico de alto rendimiento con tecnología autopilot avanzada",
   },
@@ -17,7 +17,7 @@ export const carsData = [
     price: 72000,
     year: 2018,
     fuelType: "Gasolina",
-    image: "uploads/bmw-x5.jpg",
+    image: "/bmw-x5.jpg",
     description:
       "SUV de lujo con interior premium y sistema de conducción avanzado",
   },
@@ -28,7 +28,7 @@ export const carsData = [
     price: 28000,
     year: 2024,
     fuelType: "Gasolina",
-    image: "uploads/toyota-corolla.jpg",
+    image: "/toyota-corolla.jpg",
     description: "Sedán compacto confiable y eficiente en combustible",
   },
   {
@@ -38,7 +38,7 @@ export const carsData = [
     price: 55000,
     year: 2016,
     fuelType: "Gasolina",
-    image: "uploads/audi-a4.jpg",
+    image: "/audi-a4.jpg",
     description:
       "Sedán ejecutivo con diseño elegante y tecnología de vanguardia",
   },
@@ -49,7 +49,7 @@ export const carsData = [
     price: 32000,
     year: 2022,
     fuelType: "Gasolina",
-    image: "uploads/honda-civic.jpg",
+    image: "/honda-civic.jpg",
     description: "Sedán deportivo con excelente maniobrabilidad",
   },
   {
@@ -59,7 +59,7 @@ export const carsData = [
     price: 65000,
     year: 2021,
     fuelType: "Gasolina",
-    image: "uploads/mercedes-c-class.jpg",
+    image: "/mercedes-c-class.jpg",
     description: "Sedán de lujo alemán con máxima comodidad y seguridad",
   },
   {
@@ -69,7 +69,7 @@ export const carsData = [
     price: 58000,
     year: 2020,
     fuelType: "Eléctrico",
-    image: "uploads/tesla-model-y.jpg",
+    image: "/tesla-model-y.jpg",
     description: "SUV eléctrico versátil con gran autonomía",
   },
   {
@@ -79,7 +79,7 @@ export const carsData = [
     price: 35000,
     year: 2019,
     fuelType: "Gasolina",
-    image: "uploads/volkswagen-golf.jpg",
+    image: "/volkswagen-golf.jpg",
     description: "Hatchback compacto versátil para la ciudad",
   },
 ];
