@@ -3,7 +3,6 @@ import cors from "cors";
 import path from "path";
 import dotenv from "dotenv";
 import { router as carsRouter } from "./routes/cars";
-import { initializeDatabase } from "./database/connection";
 
 dotenv.config();
 
@@ -21,13 +20,6 @@ app.get("/health", (_req, res) => {
   res.json({ status: "ok" });
 });
 
-initializeDatabase()
-  .then(() => {
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Failed to initialize database:", error);
-    process.exit(1);
-  });
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

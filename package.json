@@ -7,15 +7,15 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "seed": "ts-node src/database/seed.ts"
+    "db:create": "ts-node scripts/db-create.ts",
+    "db:drop": "ts-node scripts/db-drop.ts",
+    "db:seed": "ts-node scripts/db-seed.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.21.2",
     "mysql2": "^3.6.1",
-    "netlify-cli": "^23.10.0",
-    "netlify-lambda": "^2.0.16",
     "serverless-http": "^4.0.0",
     "uuid": "^9.0.1",
     "zod": "^3.22.2"

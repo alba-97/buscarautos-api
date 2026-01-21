@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import pool from "./connection";
-import { carsData } from "./data";
+import pool from "../src/database/connection";
+import { carsData } from "../src/database/data";
 
 async function seedDatabase() {
   try {
